@@ -1,7 +1,7 @@
 ---
 - name: Host Prerequisites
   hosts: zookeeper:kafka_broker:schema_registry:kafka_connect:ksql:control_center:kafka_rest:kafka_connect_replicator
-  gather_facts: false
+  gather_facts: true
   environment: "{{ proxy_env }}"
   tasks:
     - import_role:
